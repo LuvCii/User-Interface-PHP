@@ -1,0 +1,250 @@
+.content-table {
+    border-collapse: collapse;
+    margin: 45px 0px;
+    margin-left: 5px;
+    /* font-size: 0.9em; */
+    width: 1650px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #4e73df;
+    text-align: left;
+    font-weight: bold;
+  }
+  .content-table thead th {
+      color: white;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid  #4e73df;
+  }
+  #edit {
+    border-radius: 5px;
+    padding: 2px 12px;
+    border:  1px solid #4e73df;
+  }
+  #del {
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 2px 12px;
+    border:  1px solid #4e73df;
+  }
+  #edit:hover {
+    border: none;
+     text-decoration: none;
+    background: #009879;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #009879,
+                0 0 4px #009879,
+                0 0 6px #009879,
+                0 0 8px #009879;
+  }
+  #del:hover {
+    border: none;
+    text-decoration: none;
+    background: rgb(212, 40, 9);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(212, 40, 9),
+                0 0 4px rgb(212, 40, 9),
+                0 0 6px rgb(212, 40, 9),
+                0 0 8px rgb(212, 40, 9);
+  }
+  
+  
+
+
+
+  
+.add{
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+  .add form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #4e73df;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .add a:hover {
+    background: #4e73df;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #4e73df,
+                0 0 15px #4e73df,
+                0 0 20px #4e73df,
+                0 0 25px #4e73df;
+  }
+  
+  .add a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .add a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4e73df);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .add a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #4e73df);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .add a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #4e73df);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .add a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #4e73df);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+.form {
+    border-radius: 20px;
+    margin-left: 190px;
+    width: 70%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .form input {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-top: 10px;
+    border: none;
+    background-color: #4e73df;
+  }
+  .form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid white;
+  }
+  .form label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #fce38a;
+    transform: translateX(-100%);
+    transition: all 0.8s ease;
+  }
+  
+  .content-name {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+  }
+  .form input:focus {
+    outline: none;
+  }
+  .form input:focus + .label-name .content-name,
+  .form input:valid + .label-name .content-name {
+    transform: translateY(-110%);
+    font-size: 12px;
+    left: 10px;
+    color: #fce38a;
+  }
+  .form input:focus + .label-name::after,
+  .form input:valid + .label-name::after {
+    transform: translateX(0%);
+  }
